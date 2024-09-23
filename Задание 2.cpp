@@ -32,9 +32,10 @@ int main() {
     return 0;
 }
 
-\*
+/*
 The program compares the calculated distance between the centers with the sum and difference of the radii:
 1. If the distance is less than the sum of the radii, the circles intersect.
 2. If the distance is greater than the sum of the radii, the circles do not intersect.
 3. If the distance is equal to the sum of the radii, the circles are externally tangent.
 4. If the distance is equal to the difference of the radii, the circles are internally tangent. 
+*/
