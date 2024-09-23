@@ -25,3 +25,9 @@ int main() {
 
   return 0;
 }
+
+/*
+1. The code uses the condition a + c != b + d to check if the trapezoid is inscribable in a circle.
+2. Brahmagupta's formula is a specific formula for calculating the area of cyclic quadrilaterals.
+3. The code includes error handling to check for invalid input and provide appropriate messages.
+*/
