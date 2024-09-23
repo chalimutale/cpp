@@ -1,4 +1,5 @@
 // Chali Mutale, HKAbd-05=24, 23.09.24, 23:54
+// 2. Определить, что при делении числа а на число b получается остаток, равный одному из заданных чисел c или d
 #include <iostream>
 #include <iomanip>
 #include <cmath>
