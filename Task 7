@@ -1,0 +1,48 @@
+// Тема 7. Массивы данных
+// 22. Дан массив размера N и целые числа Ки L A(N) 1 ≤ K ≤ L≤ N). Найти среднее арифметическое элементов массива с номерами от К до L включительно.
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, K, L;
+
+    // Input array size
+    cout << "Введите размер массива (N): ";
+    cin >> N;
+
+    // Input subset boundaries
+    cout << "Введите начало диапазона (K): ";
+    cin >> K;
+
+    cout << "Введите конец диапазона (L): ";
+    cin >> L;
+
+    // Error handling
+    if (K < 1 || K > N || L < 1 || L > N || K > L) {
+        cout << "Некорректный ввод диапазона!" << endl;
+        return 1;
+    }
+
+    // Create array
+    int A[N];
+
+    // Input array elements
+    cout << "Введите элементы массива: ";
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+    }
+
+    // Calculate sum of subset
+    double sum = 0;
+    for (int i = K - 1; i < L; i++) {
+        sum += A[i];
+    }
+
+    // Calculate average
+    double average = sum / (L - K + 1);
+
+    // Output result
+    cout << "Среднее арифметическое элементов с " << K << " по " << L << " равно " << average << endl;
+
+    return 0;
+}
