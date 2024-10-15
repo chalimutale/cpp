@@ -1,0 +1,49 @@
+// Mutale Chali, NKAbd-05-24
+// Task 8 Question 22
+#include <iostream>
+// We get the vector library inorder to store and manipulate the matrix
+#include <vector>
+
+using namespace std;
+
+int main() {
+  // Gets the dimension of the matrix from the user
+  int M, N;
+  cin >> M >> N;
+
+
+  // Create a 2D vector matrix of size M x N
+  vector<vector<int>> matrix(M, vector<int>(N));
+
+  // Reads the element of the matrix from the user
+  for (int i = 0; i < M; ++i) {
+    for (int j = 0; j < N; ++j) {
+      cin >> matrix[i][j];
+    }
+  }
+
+  // Initialize a as the last even row
+  int a = -1;
+
+  // Iterate through the rows of the matrix from last to first
+  for (int i = M - 1; i >= 0; --i) {
+    bool b = true; // This line assumes the current row is even until proven not and b means is even row
+    
+    // Iterate through the elements of the current row
+    for (int j = 0; j < N; ++j) {
+      if (matrix[i][j] % 2 != 0) { // If an element is odd
+        b = false; // Marks the row not even
+        break; // It breaks the loop since there is no need to check further in this row
+      }
+    }
+    if (b) {
+      a = i; // If the row is even then update the last even variable
+      break; // Else break 
+    }
+  }
+
+  // Prints the index of the last even row
+  cout << last_even_row + 1 << endl;
+
+  return 0;
+}
